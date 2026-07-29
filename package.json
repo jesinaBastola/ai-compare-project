@@ -1,0 +1,12 @@
+{
+  "name": "ai-compare-project",
+  "version": "1.0.0",
+  "description": "Runs both tool-profile-api and compare-api together with one command.",
+  "scripts": {
+    "install:all": "npm install --prefix tool-profile-api && npm install --prefix compare-api",
+    "start": "concurrently -n TOOL-PROFILE,COMPARE -c blue,green \"npm start --prefix tool-profile-api\" \"npm start --prefix compare-api\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
